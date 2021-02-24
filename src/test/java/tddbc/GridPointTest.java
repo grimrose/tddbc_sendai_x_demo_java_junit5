@@ -68,5 +68,17 @@ public class GridPointTest {
             GridPoint sut = new GridPoint(4, 7);
             assertFalse(sut.isNeighborOn(new GridPoint(4, 7)));
         }
+
+        @Test
+        public void 格子点_4_7_と右上の格子点_5_8_は隣り合っていない() {
+            GridPoint sut = new GridPoint(4, 7);
+            assertFalse(sut.isNeighborOn(new GridPoint(5, 8)));
+        }
+
+        @Test
+        public void 格子点_4_7_と左下の格子点_3_6_は隣り合っていない() {
+            GridPoint sut = new GridPoint(4, 7);
+            assertFalse(sut.isNeighborOn(new GridPoint(3, 6)));
+        }
     }
 }
