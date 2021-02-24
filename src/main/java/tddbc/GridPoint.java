@@ -21,7 +21,7 @@ public class GridPoint {
     public boolean isNeighborOn(GridPoint another) {
         return (this.x - 1) == another.x && this.y == another.y
                || (this.x + 1) == another.x && this.y == another.y
-               || this.x == another.x && (this.y + 1) == another.y
+               || this.x == another.x && (this.y - 1) == another.y
                || this.x == another.x && (this.y + 1) == another.y;
     }
 }
