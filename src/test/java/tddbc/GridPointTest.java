@@ -49,4 +49,16 @@ public class GridPointTest {
         GridPoint sut = new GridPoint(4, 7);
         assertTrue(sut.isNeighborOn(new GridPoint(5, 7)));
     }
+
+    @Test
+    public void 格子点_4_7_と格子点_4_8_は隣り合っている() {
+        GridPoint sut = new GridPoint(4, 7);
+        assertTrue(sut.isNeighborOn(new GridPoint(4, 8)));
+    }
+
+    @Test
+    public void 格子点_4_7_と格子点_4_6_は隣り合っている() {
+        GridPoint sut = new GridPoint(4, 7);
+        assertTrue(sut.isNeighborOn(new GridPoint(4, 6)));
+    }
 }
