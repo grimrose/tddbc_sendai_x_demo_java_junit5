@@ -19,9 +19,14 @@ public class GridPoint {
     }
 
     public boolean isNeighborOn(GridPoint another) {
-        return (this.x - 1) == another.x && this.y == another.y
-               || (this.x + 1) == another.x && this.y == another.y
-               || this.x == another.x && (this.y - 1) == another.y
-               || this.x == another.x && (this.y + 1) == another.y;
+        boolean anotherIsLeft = (this.x - 1) == another.x && this.y == another.y;
+        boolean anotherIsRight = (this.x + 1) == another.x && this.y == another.y;
+        boolean anotherIsBelow = this.x == another.x && (this.y - 1) == another.y;
+        boolean anotherIsAbove = this.x == another.x && (this.y + 1) == another.y;
+
+        return anotherIsLeft
+               || anotherIsRight
+               || anotherIsBelow
+               || anotherIsAbove;
     }
 }
