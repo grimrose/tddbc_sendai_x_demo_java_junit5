@@ -33,31 +33,31 @@ public class GridPointTest {
     }
 
     @Test
-    public void 格子点_4_7_と格子点_3_7_は隣り合っている() {
+    public void 格子点_4_7_と左の格子点_3_7_は隣り合っている() {
         GridPoint sut = new GridPoint(4, 7);
         assertTrue(sut.isNeighborOn(new GridPoint(3, 7)));
     }
 
     @Test
-    public void 格子点_4_7_と格子点_4_7_は隣り合っていない() {
+    public void 格子点_4_7_と同じ格子点_4_7_は隣り合っていない() {
         GridPoint sut = new GridPoint(4, 7);
         assertFalse(sut.isNeighborOn(new GridPoint(4, 7)));
     }
 
     @Test
-    public void 格子点_4_7_と格子点_5_7_は隣り合っている() {
+    public void 格子点_4_7_と右の格子点_5_7_は隣り合っている() {
         GridPoint sut = new GridPoint(4, 7);
         assertTrue(sut.isNeighborOn(new GridPoint(5, 7)));
     }
 
     @Test
-    public void 格子点_4_7_と格子点_4_8_は隣り合っている() {
+    public void 格子点_4_7_と上の格子点_4_8_は隣り合っている() {
         GridPoint sut = new GridPoint(4, 7);
         assertTrue(sut.isNeighborOn(new GridPoint(4, 8)));
     }
 
     @Test
-    public void 格子点_4_7_と格子点_4_6_は隣り合っている() {
+    public void 格子点_4_7_と下の格子点_4_6_は隣り合っている() {
         GridPoint sut = new GridPoint(4, 7);
         assertTrue(sut.isNeighborOn(new GridPoint(4, 6)));
     }
